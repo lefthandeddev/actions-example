@@ -33,3 +33,10 @@ jobs:
       
     - name: Build project
       run: npm run build -- --prod
+
+    - name: Upload artifact
+      uses: actions/upload-artifact@v2.1.4
+      with:
+        name: app
+        path: dist/
+        if-no-files-found: error
