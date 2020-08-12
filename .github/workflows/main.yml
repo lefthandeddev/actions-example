@@ -29,7 +29,7 @@ jobs:
       run: npm ci
     
     - name: Test code
-      run: npm test -- --browsers ChromeHeadless
+      run: npm test -- --browsers ChromeHeadless --watch=false
       
     - name: Build project
       run: npm run build -- --prod
