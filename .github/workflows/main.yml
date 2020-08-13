@@ -29,6 +29,6 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v2.1.4
       with:
-        name: build-result
+        name: ${{ secrets.ARTIFACT_NAME }}
         path: dist/
         if-no-files-found: error
